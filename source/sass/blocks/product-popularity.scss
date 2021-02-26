@@ -1,0 +1,86 @@
+.product-popularity {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+}
+
+.product-popularity__title {
+  @include centring(0 auto, 283px);
+  @include text-style(24px, 30px);
+
+  color: $black;
+  text-align: center;
+  font-weight: 700;
+}
+
+.product-popularity__causes {
+  @include centring(0 auto, 242px);
+  @include text-style(12px, 20px);
+
+  padding-top: 24px;
+
+  color: $black;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.product-popularity__causes-list {
+  @include centring(0 auto, 282px);
+
+  padding: 0;
+  padding-top: 5px;
+  padding-bottom: 29px;
+  padding-left: 28px;
+
+  list-style: none;
+}
+
+.product-popularity__description {
+  @include text-style(14px, 22px);
+
+  position: relative;
+
+  margin: 0;
+  padding-top: 14px;
+  padding-bottom: 0;
+
+  color: $black;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 18px;
+    left: -21px;
+
+    display: block;
+    width: 10px;
+    height: 14px;
+
+    background-image: url("../img/strelka.png");
+    background-repeat: no-repeat;
+  }
+}
+
+.product-popularity__background {
+  padding-bottom: 244px;
+
+  background-image: url("../img/coffee.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.product-popularity__countries {
+  @include centring(0 auto, 245px);
+  @include text-style (14px, 24px);
+
+  padding-top: 37px;
+  padding-bottom: 34px;
+
+  color: $black;
+  text-align: center;
+}
+
+.product-popularity__desktop {
+  display: none;
+}

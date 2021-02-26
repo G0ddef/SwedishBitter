@@ -1,0 +1,26 @@
+.header {
+  @include centring (0 auto, 298px);
+
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 14px;
+}
+
+.header__link-wrapper {
+  margin: 0;
+  padding-top: 23px;
+  width: 120px;
+}
+
+.header__contacts {
+  padding-top: 21px;
+  padding-left: 55px;
+}
+
+.header__delivery {
+  display: none;
+}
+
+.header__free-call {
+  display: none;
+}

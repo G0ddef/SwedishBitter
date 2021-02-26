@@ -1,0 +1,10 @@
+@mixin centring($margin, $width) {
+  margin: $margin;
+  width: $width;
+}
+
+@mixin text-style($font-size, $line-height) {
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $regular;
+}

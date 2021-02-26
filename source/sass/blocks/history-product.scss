@@ -1,0 +1,95 @@
+.history-product {
+  display: flex;
+  flex-direction: column;
+
+  padding-top: 53px;
+}
+
+.history-product__title {
+  @include centring(0 auto, 298px);
+  @include text-style(20px, 26px);
+
+  padding-bottom: 17px;
+
+  color: $black;
+  font-weight: bold;
+  text-align: center;
+}
+
+.history-product__description {
+  @include centring(0 auto, 298px);
+  @include text-style(14px, 24px);
+
+  position: relative;
+
+  color: $black;
+
+  &--part2 {
+    padding-top: 10px;
+  }
+
+  &--part3 {
+    padding-top: 13px;
+  }
+}
+
+.history-product__wrapper {
+  position: relative;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    bottom: -405px;
+    left: 0;
+
+    display: block;
+    width: 100%;
+    height: 382px;
+
+    background-image: url("../img/man.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.history-product__form {
+  display: flex;
+  flex-direction: column;
+  padding-top: 432px;
+}
+
+.history-product__container {
+  @include centring(0 auto, 298px);
+
+  border: none;
+}
+
+.history-product__sub-title {
+  @include text-style(14px, 22px);
+
+  padding-bottom: 23px;
+
+  color: $black;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.history-product__wrapper-form {
+  margin: 0;
+  padding-bottom: 25px;
+}
+
+.history-product__mail {
+  @include text-style(14px, 24px);
+
+  padding-bottom: 5px;
+  width: 298px;
+
+  color: #a8c48c;
+  text-align: center;
+
+  border: none;
+  border-bottom: 1px solid #cddcbc;
+}

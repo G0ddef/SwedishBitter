@@ -1,0 +1,36 @@
+.author-description {
+  display: flex;
+  flex-direction: column;
+  padding-top: 53px;
+  padding-bottom: 46px;
+}
+
+.author-description__text {
+  @include centring(0 auto, 298px);
+  @include text-style(14px, 24px);
+
+  color: $black;
+  font-weight: 700;
+  text-align: center;
+}
+
+.author-description__author {
+  @include centring(0 auto, 164px);
+  @include text-style(14px, 18px);
+
+  display: block;
+  padding-top: 19px;
+
+  text-align: center;
+}
+
+.author-description__year {
+  @include centring(0 auto, 164px);
+  @include text-style(12px, 30px);
+
+  display: block;
+  padding-top: 12px;
+
+  color: #9a9a9a;
+  text-align: center;
+}

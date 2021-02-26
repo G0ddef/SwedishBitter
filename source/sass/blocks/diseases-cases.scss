@@ -1,0 +1,140 @@
+.diseases-cases {
+  display: flex;
+  flex-direction: column;
+}
+
+.diseases-cases__bold-text {
+  @include centring(0 auto, 298px);
+  @include text-style(24px, 30px);
+
+  display: block;
+  padding-top: 45px;
+  padding-bottom: 22px;
+
+  color: $black;
+  font-weight: 700;
+  text-align: center;
+}
+
+.diseases-cases__color-wrapper {
+  background-color: #f6f9f3;
+}
+
+.diseases-cases__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  margin-bottom: 26px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.diseases-cases__item {
+  margin: 0 auto;
+  padding-top: 24px;
+  padding-bottom: 24px;
+
+  border-bottom: 1px solid #e6efde;
+
+  &--no-uppercase {
+    padding-top: 32px;
+  }
+
+  &--no-border {
+    border: none;
+  }
+}
+
+.diseases-cases__item-wrapper {
+  @include centring(0 auto, 298px);
+
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+
+.diseases-cases__description {
+  display: block;
+  padding-left: 13px;
+  width: 248px;
+
+  color: #303030;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  &--green {
+    padding-left: 0;
+    width: 20px;
+
+    color: #a4c58c;
+  }
+
+  &--no-uppercase {
+    font-weight: $regular;
+    text-transform: none;
+  }
+}
+
+.diseases-cases__facts-wrapper {
+  @include centring(0 auto, 296px);
+
+  margin-bottom: 20px;
+
+  border: 1px solid #e6efde;
+  border-bottom: none;
+}
+
+.diseases-cases__facts {
+  @include text-style(14px, 24px);
+
+  position: relative;
+
+  margin: 0;
+  padding-top: 34px;
+  padding-bottom: 10px;
+  padding-left: 19px;
+
+  color: $black;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    bottom: -25px;
+    right: 0;
+
+    width: 85px;
+    height: 1px;
+
+    background-color: #e6efde;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+
+    width: 85px;
+    height: 1px;
+
+    background-color: #e6efde;
+  }
+}
+
+.diseases-cases__link {
+  @include text-style(14px, 24px);
+
+  display: block;
+  padding-left: 94px;
+  padding-top: 10px;
+
+  color: #7eb152;
+  font-weight: 600;
+
+  text-decoration: underline;
+}

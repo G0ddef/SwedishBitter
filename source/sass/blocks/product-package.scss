@@ -1,0 +1,115 @@
+.product-package {
+  display: flex;
+  flex-direction: column;
+  padding-top: 55px;
+
+  background-color: #f6f9f3;
+}
+
+.product-package__title {
+  @include centring(0 auto, 249px);
+  @include text-style(24px, 30px);
+
+  color: $black;
+  font-weight: 700;
+  text-align: center;
+}
+
+.product-package__list {
+  @include centring(0 auto, 246px);
+
+  padding-left: 0;
+
+  list-style: none;
+}
+
+.product-package__item {
+  padding-bottom: 107px;
+
+  &--first {
+    padding-top: 94px;
+  }
+
+  &--last {
+    padding-bottom: 75px;
+  }
+}
+
+.product-package__number {
+  @include text-style(130px, 19px);
+
+  position: relative;
+
+  display: block;
+
+  color: $white;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+
+  &--jug {
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: -37px;
+      left: 76px;
+
+      display: block;
+      width: 89px;
+      height: 91px;
+
+      background-image: url("../img/chaska.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &--book {
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: -21px;
+      left: 72px;
+
+      display: block;
+      width: 100px;
+      height: 91px;
+
+      background-image: url("../img/kniga.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &--diploma {
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: -26px;
+      left: 77px;
+
+      display: block;
+      width: 86px;
+      height: 91px;
+
+      background-image: url("../img/gramota.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+}
+
+.product-package__description {
+  @include text-style(12px, 19px);
+
+  display: block;
+  padding-top: 63px;
+
+  color: $black;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}

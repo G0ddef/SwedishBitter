@@ -1,0 +1,23 @@
+.button {
+  @include text-style(12px, 22px);
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 18px;
+
+  color: $white;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+
+  background-color: #7eb252;
+  border: none;
+
+  &--problem {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+
+  &--pharmacy {
+    padding-bottom: 28px;
+  }
+}
