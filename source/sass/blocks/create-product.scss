@@ -1,0 +1,38 @@
+.create-product {
+  display: flex;
+  flex-direction: column;
+}
+
+.create-product__title {
+  @include centring(0 auto, 280px);
+  @include text-style(24px, 30px);
+
+  padding-top: 54px;
+
+  color: #303030;
+  font-weight: 700;
+  text-align: center;
+}
+
+.create-product__description {
+  @include centring(0 auto, 298px);
+  @include text-style(14px, 22px);
+
+  padding-top: 21px;
+
+  color: #303030;
+}
+
+.create-product__bold {
+  @include centring(0 auto, 272px);
+  @include text-style(12px, 20px);
+
+  display: block;
+  padding-top: 12px;
+  padding-bottom: 38px;
+
+  color: #303030;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}

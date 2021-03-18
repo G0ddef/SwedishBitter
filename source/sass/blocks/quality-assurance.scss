@@ -1,0 +1,66 @@
+.quality-assurance {
+  display: flex;
+  flex-direction: column;
+
+  background-color: #f6f9f3;
+}
+
+.quality-assurance__title {
+  @include centring(0 auto, 298px);
+  @include text-style(24px, 50px);
+
+  padding-top: 40px;
+
+  color: #303030;
+  font-weight: 700;
+  text-align: center;
+}
+
+.quality-assurance__description {
+  @include centring(0 auto, 280px);
+  @include text-style(12px, 20px);
+
+  padding-top: 5px;
+
+  color: #303030;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.quality-assurance__picture {
+  @include centring(0 auto, 281px);
+
+  padding-top: 27px;
+}
+
+.quality-assurance__wrapper {
+  padding-top: 27px;
+}
+
+.quality-assurance__but {
+  @include centring(0 auto, 298px);
+  @include text-style(14px, 24px);
+
+  display: block;
+
+  color: #a4c58c;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.quality-assurance__specification {
+  @include centring(0 auto, 298px);
+  @include text-style(14px, 24px);
+
+  padding-top: 5px;
+  padding-left: 42px;
+
+  color: #303030;
+
+  &--top {
+    padding-top: 10px;
+    padding-bottom: 26px;
+  }
+}

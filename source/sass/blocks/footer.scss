@@ -1,0 +1,38 @@
+.footer {
+  @include centring(0 auto, 298px);
+}
+
+.footer__img-wrapper {
+  display: none;
+}
+
+.footer__site-policy-list {
+  padding: 0;
+  padding-top: 10px;
+
+  list-style: none;
+}
+
+.footer__site-policy-item {
+  padding-left: 50px;
+
+  &--second {
+    padding-left: 72px;
+  }
+
+  &--three {
+    padding-left: 82px;
+  }
+}
+
+.footer__link {
+  @include text-style(12px, 24px);
+
+  color: #9a9a9a;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.footer__contacts {
+  display: none;
+}

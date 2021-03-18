@@ -1,0 +1,363 @@
+.product-composition {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-composition__title {
+  @include centring(0 auto, 260px);
+  @include text-style(24px, 30px);
+
+  padding-top: 69px;
+  padding-bottom: 21px;
+
+  color: $black;
+  font-weight: 700;
+  text-align: center;
+}
+
+.product-composition__description {
+  @include centring(0 auto, 250px);
+  @include text-style(14px, 22px);
+
+  position: relative;
+
+  padding-left: 29px;
+
+  color: #303030;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 8px;
+    left: 8px;
+
+    display: block;
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+    background-color: #a4c58c;
+  }
+
+  &--second {
+    padding-top: 10px;
+    padding-bottom: 25px;
+
+    &::before {
+      content: "";
+
+      top: 18px;
+    }
+  }
+}
+
+.product-composition__list {
+  @include centring(0 auto, 298px);
+
+  padding-left: 0;
+
+  list-style: none;
+}
+
+.product-composition__item {
+  position: relative;
+
+  margin-bottom: 9px;
+
+  background-color: #f6f9f3;
+}
+
+.product-composition__number {
+  @include text-style(14px, 26px);
+
+  display: block;
+  margin-left: 9px;
+  padding-bottom: 23px;
+
+  color: #a4c58c;
+  font-weight: 700;
+
+  writing-mode: vertical-rl;
+  transform: rotate(-180deg);
+}
+
+.product-composition__herbs-names {
+  @include text-style(14px, 26px);
+
+  position: relative;
+
+  display: block;
+  margin-left: 263px;
+  padding-top: 12px;
+  padding-bottom: 66px;
+
+  color: #a4c58c;
+  font-weight: 700;
+
+  writing-mode: vertical-rl;
+  transform: rotate(-180deg);
+
+  &--one {
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 22px;
+      left: -11px;
+
+      display: block;
+      width: 242px;
+      height: 275px;
+
+      transform: rotate(180deg);
+      background-image: url("../img/one.png");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--second {
+    padding-top: 16px;
+    padding-bottom: 117px;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 20px;
+      left: -3px;
+
+      display: block;
+      width: 242px;
+      height: 275px;
+
+      transform: rotate(180deg);
+      background-image: url("../img/two.png");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--three {
+    padding-top: 20px;
+    padding-bottom: 31px;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 12px;
+      left: 7px;
+
+      display: block;
+      width: 242px;
+      height: 275px;
+
+      transform: rotate(180deg);
+      background-image: url("../img/three.png");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--fourth {
+    padding-top: 18px;
+    padding-bottom: 113px;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 6px;
+      left: 1px;
+
+      display: block;
+      width: 242px;
+      height: 275px;
+
+      transform: rotate(180deg);
+      background-image: url("../img/fourth.png");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--five {
+    padding-top: 19px;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: -1px;
+      left: -31px;
+
+      display: block;
+      width: 242px;
+      height: 275px;
+
+      transform: rotate(180deg);
+      background-image: url("../img/five.png");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--six {
+    padding-top: 20px;
+    padding-bottom: 85px;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: -8px;
+      left: -22px;
+
+      display: block;
+      width: 242px;
+      height: 275px;
+
+      transform: rotate(180deg);
+      background-image: url("../img/six.png");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--seven {
+    padding-top: 18px;
+    padding-bottom: 116px;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 2px;
+      left: -29px;
+
+      display: block;
+      width: 242px;
+      height: 275px;
+
+      transform: rotate(180deg);
+      background-image: url("../img/seven.png");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--eight {
+    padding-top: 16px;
+    padding-bottom: 85px;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 3px;
+      left: -22px;
+
+      display: block;
+      width: 242px;
+      height: 275px;
+
+      transform: rotate(180deg);
+      background-image: url("../img/eigth.png");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--nine {
+    padding-top: 15px;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: -17px;
+      left: -21px;
+
+      display: block;
+      width: 242px;
+      height: 275px;
+
+      transform: rotate(180deg);
+      background-image: url("../img/nine.png");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--ten {
+    padding-top: 19px;
+    padding-bottom: 91px;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: -6px;
+      left: -31px;
+
+      display: block;
+      width: 242px;
+      height: 275px;
+
+      transform: rotate(180deg);
+      background-image: url("../img/ten.png");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--eleven {
+    padding-top: 16px;
+    padding-bottom: 106px;
+
+    &::before {
+      @include text-style(276px, 22px);
+
+      content: "?";
+
+      position: absolute;
+      top: 148px;
+      left: 205px;
+
+      display: block;
+      width: 10px;
+      height: 10px;
+
+      color: #cedfc0;
+      font-weight: 700;
+
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.product-composition__wild-root {
+  display: none;
+}
+
+.product-composition__question {
+  @include text-style(14px, 24px);
+
+  position: absolute;
+  top: 129px;
+  left: 53px;
+
+  display: block;
+  width: 111px;
+
+  color: #303030;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.product-composition__clean-properties {
+  @include centring(0 auto, 255px);
+  @include text-style(14px, 24px);
+
+  padding-top: 34px;
+  padding-bottom: 47px;
+
+  color: #303030;
+  text-align: center;
+
+  &--desktop {
+    display: none;
+  }
+}
