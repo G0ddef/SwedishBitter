@@ -1,7 +1,7 @@
 .product-popularity {
   display: flex;
   flex-direction: column;
-  padding-top: 50px;
+  margin-top: 50px;
 }
 
 .product-popularity__title {
@@ -81,6 +81,86 @@
   text-align: center;
 }
 
-.product-popularity__desktop {
-  display: none;
+@media (min-width: $tablet-width) {
+  .product-popularity {
+    margin-top: 140px;
+  }
+
+  .product-popularity__title {
+    @include text-style(30px, 40px);
+
+    width: 538px;
+
+    font-weight: 700;
+  }
+
+  .product-popularity__causes {
+    @include text-style(14px, 20px);
+
+    padding-top: 38px;
+    width: 289px;
+
+    font-weight: 700;
+  }
+
+  .product-popularity__causes-list {
+    padding-top: 18px;
+    padding-bottom: 40px;
+    width: 461px;
+  }
+
+  .product-popularity__causes-item {
+    padding-bottom: 7px;
+  }
+
+  .product-popularity__description {
+    @include text-style(16px, 22px);
+
+    &::before {
+      content: "";
+
+      top: 31px;
+      left: -49px;
+    }
+  }
+
+  .product-popularity__background {
+    padding-top: 401px;
+
+    background-image: url("../img/coffee-tablet.jpg");
+    background-size: cover;
+  }
+
+  .product-popularity__position-wrapper {
+    position: relative;
+
+    margin: 0 auto;
+  }
+
+  .product-popularity__block-wrapper {
+    position: absolute;
+    bottom: -89px;
+    left: -301px;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 601px;
+
+    background-color: $white;
+  }
+
+  .product-popularity__countries {
+    @include text-style (16px, 24px);
+
+    box-sizing: border-box;
+    padding-top: 35px;
+    padding-left: 43px;
+    padding-right: 50px;
+    width: 560px;
+
+    text-align: left;
+
+    border: 1px solid #c8dcba;
+    border-bottom: none;
+  }
 }

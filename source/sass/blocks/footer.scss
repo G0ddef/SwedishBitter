@@ -36,3 +36,76 @@
 .footer__contacts {
   display: none;
 }
+
+
+@media (min-width: $tablet-width) {
+  .footer {
+    @include centring(0 auto, 724px);
+
+    display: flex;
+    flex-direction: row;
+  }
+
+  .footer__img-wrapper {
+    display: block;
+    margin: 0;
+    margin-right: 64px;
+    padding-top: 68px;
+    padding-bottom: 55px;
+  }
+
+  .footer__site-policy-list {
+    margin: 0;
+    margin-right: 80px;
+    padding-top: 42px;
+    width: 206px;
+  }
+
+  .footer__site-policy-item {
+    padding: 0;
+
+    &--second {
+      padding-left: 22px;
+    }
+
+    &--three {
+      padding-left: 32px;
+    }
+  }
+
+  .footer__contacts {
+    display: flex;
+    flex-direction: column;
+    padding-top: 62px;
+  }
+
+  .footer__telefon {
+    @include text-style(20px, 24px);
+
+    position: relative;
+
+    font-weight: 700;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 7px;
+      left: -26px;
+
+      display: block;
+      width: 16px;
+      height: 20px;
+
+      background-image: url("../img/telefon.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  .footer__free-call {
+    @include text-style(12px, 18px);
+
+    padding-left: 51px;
+  }
+}

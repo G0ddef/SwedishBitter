@@ -23,7 +23,7 @@
 
   padding-left: 29px;
 
-  color: #303030;
+  color: $black;
 
   &::before {
     content: "";
@@ -53,19 +53,18 @@
 }
 
 .product-composition__list {
-  @include centring(0 auto, 298px);
-
   padding-left: 0;
 
   list-style: none;
 }
 
 .product-composition__item {
+  @include centring(0 auto, 298px);
   position: relative;
 
   margin-bottom: 9px;
 
-  background-color: #f6f9f3;
+  background-color: $grey;
 }
 
 .product-composition__number {
@@ -73,12 +72,14 @@
 
   display: block;
   margin-left: 9px;
-  padding-bottom: 23px;
+  margin-top: 23px;
+  height: 38px;
 
   color: #a4c58c;
   font-weight: 700;
 
-  writing-mode: vertical-rl;
+
+  writing-mode: tb-rl;
   transform: rotate(-180deg);
 }
 
@@ -95,7 +96,8 @@
   color: #a4c58c;
   font-weight: 700;
 
-  writing-mode: vertical-rl;
+
+  writing-mode: tb-rl;
   transform: rotate(-180deg);
 
   &--one {
@@ -342,7 +344,7 @@
   display: block;
   width: 111px;
 
-  color: #303030;
+  color: $black;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -354,10 +356,234 @@
   padding-top: 34px;
   padding-bottom: 47px;
 
-  color: #303030;
+  color: $black;
   text-align: center;
 
   &--desktop {
     display: none;
+  }
+}
+
+
+@media (min-width: $tablet-width) {
+  .product-composition {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product-composition__title {
+    @include centring(0 auto, 465px);
+    @include text-style(30px, 40px);
+
+    padding-top: 90px;
+    padding-bottom: 40px;
+
+    font-weight: 700;
+  }
+
+  .product-composition__description {
+    @include centring(0 auto, 478px);
+    @include text-style(16px, 22px);
+
+    &--second {
+      padding-top: 31px;
+
+      &::before {
+        content: "";
+
+        top: 38px;
+      }
+    }
+  }
+
+  .product-composition__br {
+    display: none;
+  }
+
+  .product-composition__list {
+    @include centring(0 auto, 720px);
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+
+  .product-composition__item {
+    margin-bottom: 38px;
+    margin-left: 10px;
+    margin-right: 28px;
+    width: 331px;
+
+    &:nth-child(even) {
+      margin-right: 0;
+    }
+  }
+
+  .product-composition__herbs-names {
+    @include text-style(16px, 29px);
+
+    margin-left: 294px;
+
+    &--one {
+      padding-top: 13px;
+      padding-bottom: 81px;
+      height: 178px;
+
+      &::before {
+        content: "";
+
+        top: 38px;
+        left: 7px;
+      }
+    }
+
+    &--second {
+      padding-top: 16px;
+      padding-bottom: 138px;
+      height: 116px;
+
+      &::before {
+        content: "";
+
+        top: 30px;
+        left: 13px;
+      }
+    }
+
+    &--three {
+      padding-top: 18px;
+      padding-bottom: 41px;
+      height: 212px;
+
+      &::before {
+        content: "";
+
+        top: 30px;
+        left: 30px;
+      }
+    }
+
+    &--fourth {
+      padding-top: 18px;
+      padding-bottom: 134px;
+      height: 118px;
+
+
+      &::before {
+        content: "";
+
+        top: 30px;
+        left: 30px;
+      }
+    }
+
+    &--five {
+      padding-top: 31px;
+      height: 174px;
+
+
+      &::before {
+        content: "";
+
+        top: 30px;
+        left: 30px;
+      }
+    }
+
+    &--six {
+      padding-top: 10px;
+      padding-bottom: 108px;
+      height: 150px;
+
+
+      &::before {
+        content: "";
+
+        top: 30px;
+        left: 30px;
+      }
+    }
+
+    &--seven {
+      padding-top: 16px;
+      padding-bottom: 142px;
+      height: 115px;
+
+
+      &::before {
+        content: "";
+
+        top: 30px;
+        left: 30px;
+      }
+    }
+
+    &--eight {
+      padding-top: 10px;
+      padding-bottom: 106px;
+      height: 149px;
+
+
+      &::before {
+        content: "";
+
+        top: 30px;
+        left: 30px;
+      }
+    }
+
+    &--nine {
+      padding-top: 17px;
+      padding-bottom: 82px;
+      height: 174px;
+
+
+      &::before {
+        content: "";
+
+        top: 30px;
+        left: 30px;
+      }
+    }
+
+    &--ten {
+      padding-top: 10px;
+      padding-bottom: 114px;
+      height: 147px;
+
+
+      &::before {
+        content: "";
+
+        top: 30px;
+        left: 30px;
+      }
+    }
+
+    &--eleven {
+      padding-top: 17px;
+      padding-bottom: 104px;
+      height: 149px;
+    }
+  }
+
+  .product-composition__properties {
+    box-sizing: border-box;
+    width: 345px;
+    margin-bottom: auto;
+    margin-left: 3px;
+
+    border: 1px solid $green;
+  }
+
+  .product-composition__clean-properties {
+    @include text-style(16px, 24px);
+
+    padding-top: 78px;
+    padding-bottom: 72px;
+    width: 285px;
+
+    text-align: left;
   }
 }

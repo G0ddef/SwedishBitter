@@ -1,5 +1,5 @@
 .header {
-  @include centring (0 auto, 298px);
+  @include centring(0 auto, 298px);
 
   display: flex;
   flex-direction: row;
@@ -17,10 +17,89 @@
   padding-left: 55px;
 }
 
+.header__telefon {
+  @include text-style(14px, 24px);
+
+  display: block;
+
+  color: $black;
+  font-weight: 500;
+}
+
 .header__delivery {
   display: none;
 }
 
+source {
+  width: 400px;
+}
+
 .header__free-call {
   display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .header {
+    @include centring(0 auto, 724px);
+
+    display: flex;
+    padding-bottom: 31px;
+  }
+
+  .header__link-wrapper {
+    padding-top: 35px;
+  }
+
+  .header__img {
+    object-fit: contain;
+    width: 196px;
+    height: 30px;
+  }
+
+  .header__delivery {
+    @include text-style(14px, 24px);
+
+    display: block;
+    margin: 0;
+    padding-top: 43px;
+    padding-left: 106px;
+
+    color: #9a9a9a;
+  }
+
+  .header__contacts {
+    padding-top: 30px;
+    padding-left: 142px;
+  }
+
+  .header__telefon {
+    position: relative;
+
+    @include text-style(20px, 26px);
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 7px;
+      left: -26px;
+
+      display: block;
+      width: 16px;
+      height: 20px;
+
+      background-image: url("../img/telefon.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  .header__free-call {
+    @include text-style(12px, 18px);
+
+    display: block;
+    padding-left: 46px;
+
+    color: #9a9a9a;
+  }
 }

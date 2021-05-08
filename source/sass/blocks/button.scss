@@ -1,5 +1,8 @@
 .button {
   @include text-style(12px, 22px);
+
+  position: relative;
+
   display: block;
   padding-top: 20px;
   padding-bottom: 18px;
@@ -29,5 +32,228 @@
   &--elexir {
     padding-top: 18px;
     padding-bottom: 10px;
+  }
+
+  &--form {
+    margin-top: 63px;
+    margin-left: 279px;
+    width: 250px;
+
+    font-size: 14px;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 27px;
+      right: 60px;
+
+      display: block;
+      width: 29px;
+      height: 10px;
+
+      background-image: url("../img/big-strelka.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &--pharmacy-tablet {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .button {
+    &--problem {
+      position: relative;
+
+      @include centring(0 auto, 415px);
+      @include text-style(14px, 22px);
+
+      font-weight: 700;
+
+      &::after {
+        content: "";
+
+        position: absolute;
+        top: 30px;
+        right: 58px;
+
+        display: block;
+        width: 32px;
+        height: 8px;
+
+        background-image: url("../img/big-strelka.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+
+    &--pharmacy {
+      display: none;
+    }
+
+    &--join {
+      @include text-style(14px, 22px);
+
+      padding-top: 23px;
+      padding-bottom: 24px;
+
+      font-weight: 700;
+
+      &::after {
+        content: "";
+
+        position: absolute;
+        top: 28px;
+        right: 26px;
+
+        display: block;
+        width: 32px;
+        height: 8px;
+
+        background-image: url("../img/big-strelka.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+
+    &--pharmacy-tablet {
+      @include centring(0 auto, 560px);
+      @include text-style(14px, 22px);
+
+      position: relative;
+
+      display: block;
+      padding-bottom: 26px;
+
+      font-weight: 600;
+
+      &::after {
+        content: "";
+
+        position: absolute;
+        top: 28px;
+        right: 38px;
+
+        display: block;
+        width: 32px;
+        height: 8px;
+
+        background-image: url("../img/big-strelka.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+
+    &--no-tablet {
+      display: none;
+    }
+
+    &--mail {
+      @include text-style(14px, 22px);
+
+      margin-left: 44px;
+      padding-left: 42px;
+      width: 280px;
+
+      text-align: left;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+
+      &::after {
+        content: "";
+
+        position: absolute;
+        top: 28px;
+        right: 38px;
+
+        display: block;
+        width: 32px;
+        height: 8px;
+
+        background-image: url("../img/big-strelka.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+
+    &--picking-herbs {
+      @include text-style(14px, 22px);
+
+      font-weight: 700;
+
+      &::after {
+        content: "";
+
+        position: absolute;
+        top: 28px;
+        right: 38px;
+
+        display: block;
+        width: 32px;
+        height: 8px;
+
+        background-image: url("../img/big-strelka.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+
+    &--elexir {
+      @include centring(0 auto, 468px);
+      @include text-style(14px, 22px);
+
+      margin-bottom: 71px;
+      padding-top: 23px;
+      padding-bottom: 25px;
+      padding-left: 33px;
+
+      font-weight: 700;
+      text-align: left;
+      letter-spacing: 0.8px;
+
+      &::after {
+        content: "";
+
+        position: absolute;
+        top: 28px;
+        right: 38px;
+
+        display: block;
+        width: 32px;
+        height: 8px;
+
+        background-image: url("../img/big-strelka.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+
+    &--but {
+      @include centring(0 auto, 378px);
+
+      &::after {
+        content: "";
+
+        position: absolute;
+        top: 28px;
+        right: 60px;
+
+        display: block;
+        width: 32px;
+        height: 8px;
+
+        background-image: url("../img/big-strelka.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+
+    &:hover {
+      opacity: 0.7;
+      cursor: pointer;
+    }
   }
 }

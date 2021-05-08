@@ -17,7 +17,7 @@
 }
 
 .diseases-cases__color-wrapper {
-  background-color: #f6f9f3;
+  background-color: $grey;
 }
 
 .diseases-cases__list {
@@ -30,10 +30,16 @@
   list-style: none;
 }
 
+.diseases-cases__row {
+  list-style: none;
+  padding: 0;
+}
+
 .diseases-cases__item {
   margin: 0 auto;
   padding-top: 24px;
   padding-bottom: 24px;
+  width: 298px;
 
   border-bottom: 1px solid #e6efde;
 
@@ -59,7 +65,7 @@
   padding-left: 13px;
   width: 248px;
 
-  color: #303030;
+  color: $black;
   font-size: 12px;
   line-height: 20px;
   font-weight: 600;
@@ -137,4 +143,184 @@
   font-weight: 600;
 
   text-decoration: underline;
+}
+
+@media (min-width: $tablet-width) {
+  .diseases-cases__color-wrapper {
+    background-color: $white;
+  }
+
+  .diseases-cases__bold-text {
+    @include text-style(30px, 40px);
+
+    padding-top: 28px;
+    padding-bottom: 42px;
+    width: 352px;
+
+    font-weight: 700;
+  }
+
+  .diseases-cases__list {
+    margin-bottom: 0;
+
+    background-color: $grey;
+  }
+
+  .diseases-cases__item {
+    @include centring(0 auto, 653px);
+
+    &--seven {
+      order: 1;
+    }
+
+    &--eight {
+      order: 0;
+    }
+
+    &--nine {
+      order: 1;
+    }
+
+    &--no-uppercase {
+      padding-top: 23px;
+    }
+  }
+
+  .diseases-cases__item-wrapper {
+    @include centring(0 auto, 653px);
+
+    &--no-uppercase {
+      width: 303px;
+    }
+  }
+
+  .diseases-cases__description {
+    @include text-style(14px, 20px);
+
+    padding-left: 21px;
+
+    font-weight: 600;
+
+    width: 653px;
+
+    &--green {
+      padding-left: 0;
+      width: 20px;
+    }
+
+    &--no-uppercase {
+      @include text-style(16px, 20px);
+
+      width: 277px;
+    }
+  }
+
+  .diseases-cases__row {
+    @include centring(0 auto, 653px);
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 0;
+
+    list-style: none;
+  }
+
+  .diseases-cases__row > .diseases-cases__item {
+    margin: 0;
+    width: 303px;
+
+    &--seven {
+      border-bottom: none;
+    }
+
+    &--eight {
+      width: 260px;
+    }
+
+    &--nine {
+      width: 260px;
+    }
+
+    &:nth-child(n+3) {
+      padding-left: 87px;
+    }
+  }
+
+  .diseases-cases__background-wrapper {
+    margin-bottom: 40px;
+    padding-top: 681px;
+
+    background-image: url("../img/men.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  .diseases-cases__position-wrapper {
+    position: relative;
+
+    margin: 0 auto;
+    width: 10px;
+  }
+
+  .diseases-cases__facts-wrapper {
+    position: absolute;
+    bottom: -40px;
+    left: -204px;
+    z-index: 1;
+
+    box-sizing: border-box;
+    padding-top: 23px;
+    padding-left: 23px;
+    padding-right: 23px;
+    width: 417px;
+
+    background-color: #f6f9f3;
+    border: none;
+  }
+
+  .diseases-cases__facts {
+    @include centring(0 auto, 373px);
+    @include text-style(16px, 24px);
+
+    box-sizing: border-box;
+    padding-top: 28px;
+    padding-bottom: 32px;
+    padding-left: 46px;
+
+    border: 1px solid $green;
+    border-bottom: none;
+
+    &::before {
+      content: "";
+
+      bottom: -1px;
+      right: -1px;
+
+      width: 127px;
+
+      background-color: $green;
+    }
+
+    &::after {
+      content: "";
+
+      bottom: -1px;
+      left: -1px;
+
+      width: 122px;
+
+      background-color: $green;
+    }
+  }
+
+  .diseases-cases__link {
+    @include text-style(14px, 24px);
+
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 128px;
+
+    font-weight: 600;
+  }
 }

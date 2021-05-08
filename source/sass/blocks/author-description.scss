@@ -34,3 +34,45 @@
   color: #9a9a9a;
   text-align: center;
 }
+
+@media (min-width: $tablet-width) {
+  .author-description {
+    @include centring(0 auto, 724px);
+
+    margin-top: 171px;
+    padding-top: 48px;
+    padding-bottom: 35px;
+
+    border-top: 2px solid $green;
+    border-bottom: 2px solid $green;
+  }
+
+  .author-description__text {
+    @include centring(0 auto, 595px);
+    @include text-style(18px, 36px);
+
+    font-weight: 700;
+  }
+
+  .author-description__container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .author-description__author {
+    @include text-style(16px, 30px);
+
+    margin: 0;
+    padding-top: 14px;
+    padding-left: 170px;
+    width: auto;
+  }
+
+  .author-description__year {
+    @include text-style(12px, 30px);
+    margin: 0;
+    padding-top: 14px;
+    padding-left: 4px;
+    width: auto;
+  }
+}

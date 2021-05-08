@@ -1,8 +1,9 @@
 .history-product {
   display: flex;
   flex-direction: column;
-
   padding-top: 53px;
+
+  background-color: $grey;
 }
 
 .history-product__title {
@@ -31,6 +32,10 @@
   &--part3 {
     padding-top: 13px;
   }
+}
+
+.history-product__tablet-indent {
+  display: none;
 }
 
 .history-product__wrapper {
@@ -92,4 +97,101 @@
 
   border: none;
   border-bottom: 1px solid #cddcbc;
+}
+
+@media (min-width: $tablet-width) {
+  .history-product {
+    padding-top: 213px;
+  }
+
+  .history-product__title {
+    @include text-style(30px, 40px);
+
+    padding-bottom: 31px;
+    width: 429px;
+
+    font-weight: 700;
+  }
+
+  .history-product__br {
+    display: none;
+  }
+
+  .history-product__description {
+    @include text-style(16px, 24px);
+
+    width: 706px;
+  }
+
+  .history-product__mobile-indent {
+    display: none;
+  }
+
+  .history-product__tablet-indent {
+    display: inline;
+  }
+
+  .history-product__wrapper {
+    padding-bottom: 94px;
+
+    &::after {
+      content: "";
+
+      background-image: none;
+    }
+  }
+
+  .history-product__container {
+    position: relative;
+
+    margin: 0;
+    padding-left: 42px;
+    width: 310px;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: -209px;
+      right: -362px;
+
+      display: block;
+      width: 352px;
+      height: 419px;
+
+      background-image: url("../img/man-tablet.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  .history-product__form-container {
+    background-color: $white;
+  }
+
+  .history-product__form {
+    @include centring(0 auto, 724px);
+
+    padding-top: 54px;
+  }
+
+  .history-product__wrapper-form {
+    padding-bottom: 36px;
+  }
+
+  .history-product__sub-title {
+    @include text-style(14px, 22px);
+
+    padding-bottom: 42px;
+    width: 229px;
+
+    text-align: left;
+    font-weight: 700;
+  }
+
+  .history-product__mail {
+    width: 280px;
+
+    text-align: left;
+  }
 }

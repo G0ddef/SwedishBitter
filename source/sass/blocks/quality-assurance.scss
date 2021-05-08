@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
 
-  background-color: #f6f9f3;
+  background-color: $grey;
 }
 
 .quality-assurance__title {
@@ -11,7 +11,7 @@
 
   padding-top: 40px;
 
-  color: #303030;
+  color: $black;
   font-weight: 700;
   text-align: center;
 }
@@ -22,7 +22,7 @@
 
   padding-top: 5px;
 
-  color: #303030;
+  color: $black;
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
@@ -57,10 +57,124 @@
   padding-top: 5px;
   padding-left: 42px;
 
-  color: #303030;
+  color: $black;
 
   &--top {
     padding-top: 10px;
     padding-bottom: 26px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .quality-assurance {
+    display: flex;
+    flex-direction: column;
+
+    background-color: $white;
+  }
+
+  .quality-assurance__title {
+    @include centring(0 auto, 314px);
+    @include text-style(30px, 50px);
+
+    padding-top: 134px;
+    padding-bottom: 41px;
+
+    font-weight: 700;
+  }
+
+  .quality-assurance__description {
+    @include centring(0 auto, 523px);
+    @include text-style(14px, 24px);
+
+    padding-top: 42px;
+
+    font-weight: 700;
+  }
+
+  .quality-assurance__color-wrapper {
+    background-color: $grey;
+  }
+
+  .quality-assurance__container {
+    @include centring(0 auto, 724px);
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 69px;
+  }
+
+  .quality-assurance__picture {
+    margin: 0;
+    padding-top: 34px;
+  }
+
+  .quality-assurance__wrapper {
+    margin-top: 34px;
+    margin-bottom: auto;
+    margin-left: 29px;
+    padding-top: 0;
+    padding-bottom: 19px;
+    width: 414px;
+
+    background-color: $white;
+  }
+
+  .quality-assurance__but {
+    position: relative;
+
+    margin: 0;
+    padding-top: 8px;
+    padding-left: 67px;
+    width: auto;
+
+    line-height: 12px;
+    text-align: left;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 19px;
+      left: 18px;
+
+      display: block;
+      width: 44px;
+      height: 1px;
+
+      background-color: $green;
+    }
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 19px;
+      right: 19px;
+
+      display: block;
+      width: 292px;
+      height: 1px;
+
+      background-color: $green;
+    }
+  }
+
+  .quality-assurance__specification {
+    @include text-style(16px, 22px);
+
+    box-sizing: border-box;
+    padding-top: 83px;
+    padding-left: 29px;
+    width: 378px;
+
+    border-left: 1px solid $green;
+    border-right: 1px solid $green;
+
+    &--top {
+      padding-top: 26px;
+      padding-bottom: 77px;
+    }
   }
 }

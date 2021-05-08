@@ -3,7 +3,7 @@
   flex-direction: column;
   padding-top: 55px;
 
-  background-color: #f6f9f3;
+  background-color: $grey;
 }
 
 .product-package__title {
@@ -13,6 +13,10 @@
   color: $black;
   font-weight: 700;
   text-align: center;
+}
+
+.product-package__br {
+  display: none;
 }
 
 .product-package__list {
@@ -112,4 +116,105 @@
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .product-package {
+    padding-top: 93px;
+  }
+
+  .product-package__title {
+    @include centring(0 auto, 605px);
+    @include text-style(30px, 40px);
+
+    font-weight: 700;
+  }
+
+  .product-package__br {
+    display: inline;
+  }
+
+  .product-package__list {
+    @include centring(0 auto, 724px);
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 45px;
+    margin-bottom: 99px;
+
+    background-color: $white;
+  }
+
+  .product-package__item {
+    margin-top: 13px;
+    margin-bottom: 13px;
+    margin-left: 14px;
+    padding: 0;
+    width: 220px;
+
+    border: 1px solid #ecf3e7;
+  }
+
+  .product-package__number {
+    @include text-style(110px, 14px);
+
+    padding-top: 84px;
+
+    color: #f7f9f3;
+    font-weight: 900;
+
+    &--jug {
+      &::after {
+        content: "";
+
+        top: 63px;
+        left: 76px;
+
+        width: 61px;
+        height: 61px;
+
+        background-image: url("../img/chaska-tablet.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+
+    &--book {
+      &::after {
+        content: "";
+
+        top: 65px;
+        left: 69px;
+
+        width: 75px;
+        height: 55px;
+
+        background-image: url("../img/kniga-tablet.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+
+    &--diploma {
+      &::after {
+        content: "";
+
+        top: 65px;
+        left: 76px;
+
+        width: 63px;
+        height: 54px;
+
+        background-image: url("../img/gramote-tablet.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+
+  .product-package__description {
+    padding-top: 53px;
+    padding-bottom: 53px;
+  }
 }
